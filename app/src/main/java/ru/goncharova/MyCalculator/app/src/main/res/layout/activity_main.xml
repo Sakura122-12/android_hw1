@@ -38,32 +38,29 @@
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="1dp">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonBracket_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="("
-                    android:background="@color/purple_200"
                     tools:ignore="ButtonStyle,MissingConstraints"
                     tools:layout_editor_absoluteX="0dp"
                     tools:layout_editor_absoluteY="455dp" />
 
-                <Button
+            <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonBracket_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=")"
-                    android:background="@color/purple_200"
                     tools:ignore="MissingConstraints"
                     tools:layout_editor_absoluteX="88dp"
                     tools:layout_editor_absoluteY="455dp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonDel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Del"
-                android:background="@color/purple_200"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="88dp"
                 tools:layout_editor_absoluteY="455dp" />
@@ -81,39 +78,32 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonMinus"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/minus"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"
                     tools:ignore="MissingConstraints"
                     tools:layout_conversion_absoluteHeight="48dp"
                     tools:layout_conversion_absoluteWidth="88dp"
                     tools:layout_editor_absoluteX="0dp"
                     tools:layout_editor_absoluteY="503dp" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonPlus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/plus"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"
                  />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonSplit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/div"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"
-                    />
+                    android:text="@string/div"/>
             </LinearLayout>
         </TableRow>
 
@@ -126,32 +116,26 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/purple_200"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d8"
-                    android:textColor="@color/white" />
+                    android:text="@string/d8"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d9"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200" />
+                    android:text="@string/d9"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d7"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d7"/>
             </LinearLayout>
         </TableRow>
 
@@ -164,32 +148,26 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d4"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d4"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d6"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d6"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d5"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d5"/>
             </LinearLayout>
         </TableRow>
 
@@ -202,32 +180,26 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d1"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d1"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d3"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d3"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d2"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d2"/>
             </LinearLayout>
         </TableRow>
 
@@ -240,33 +212,27 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/d0"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/d0"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonMul"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/mul"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/mul"/>
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonEq"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:focusable="true"
                     android:fontFamily="sans-serif-black"
-                    android:text="@string/eq"
-                    android:textColor="@color/white"
-                    android:background="@color/purple_200"/>
+                    android:text="@string/eq"/>
             </LinearLayout>
         </TableRow>
 
