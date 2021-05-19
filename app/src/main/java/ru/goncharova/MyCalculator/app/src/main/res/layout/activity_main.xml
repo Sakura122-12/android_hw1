@@ -9,7 +9,6 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="138dp"
         android:rotation="90"
         android:scaleX="2.5"
         android:scaleY="2"
@@ -19,7 +18,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="750px"
+        android:layout_height="@dimen/layoutHeight"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TableRow
@@ -43,27 +42,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="("
-                    tools:ignore="ButtonStyle,MissingConstraints"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="455dp" />
+                    tools:ignore="ButtonStyle,MissingConstraints" />
 
             <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonBracket_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=")"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="88dp"
-                    tools:layout_editor_absoluteY="455dp" />
+                    tools:ignore="MissingConstraints" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonDel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Del"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="88dp"
-                tools:layout_editor_absoluteY="455dp" />
+                tools:ignore="MissingConstraints" />
 
             </LinearLayout>
         </TableRow>
@@ -84,11 +77,7 @@
                     android:layout_height="match_parent"
                     android:fontFamily="sans-serif-black"
                     android:text="@string/minus"
-                    tools:ignore="MissingConstraints"
-                    tools:layout_conversion_absoluteHeight="48dp"
-                    tools:layout_conversion_absoluteWidth="88dp"
-                    tools:layout_editor_absoluteX="0dp"
-                    tools:layout_editor_absoluteY="503dp" />
+                    tools:ignore="MissingConstraints"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonPlus"
@@ -247,7 +236,6 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints" />
 
 
