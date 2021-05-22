@@ -25,11 +25,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -39,26 +39,26 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonBracket_1"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="("
-                    style="@style/ButtonStyle"/>
+                    android:text="(" />
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonBracket_2"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=")"
-                    tools:ignore="MissingConstraints"
-                    style="@style/ButtonStyle"/>
+                    tools:ignore="MissingConstraints" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonDel"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Del"
-                tools:ignore="MissingConstraints"
-                style="@style/ButtonStyle"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonDel"
+                    style="@style/ButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Del"
+                    tools:ignore="MissingConstraints" />
 
             </LinearLayout>
         </TableRow>
@@ -75,25 +75,25 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonMinus"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="@string/minus"
-                    tools:ignore="MissingConstraints"
-                    style="@style/ButtonStyle"/>
+                    tools:ignore="MissingConstraints" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonPlus"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/plus"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/plus" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonSplit"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/div"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/div" />
             </LinearLayout>
         </TableRow>
 
@@ -108,24 +108,24 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button8"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d8"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d8" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button9"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d9"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d9" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button7"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d7"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d7" />
             </LinearLayout>
         </TableRow>
 
@@ -140,24 +140,24 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button4"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d4"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d4" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button6"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d6"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d6" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button5"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d5"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d5" />
             </LinearLayout>
         </TableRow>
 
@@ -172,24 +172,24 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button1"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d1"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d1" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button3"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d3"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d3" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button2"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d2"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d2" />
             </LinearLayout>
         </TableRow>
 
@@ -204,24 +204,24 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button0"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/d0"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/d0" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonMul"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/mul"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/mul" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonEq"
+                    style="@style/ButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/eq"
-                    style="@style/ButtonStyle"/>
+                    android:text="@string/eq" />
             </LinearLayout>
         </TableRow>
 
@@ -231,12 +231,20 @@
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
