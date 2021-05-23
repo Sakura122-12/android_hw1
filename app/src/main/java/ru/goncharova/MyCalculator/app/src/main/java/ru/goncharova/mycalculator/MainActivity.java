@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
                     Button bt = (Button) v;
 
-                    TextView text = (TextView) findViewById(R.id.editTextTextPersonName);
+                    TextView text = (TextView) findViewById(R.id.textView);
+                    TextView history = (TextView) findViewById(R.id.editTextTextMultiLine);
 
                     if(bt.getText().equals("Del")) {
 
@@ -83,8 +84,10 @@ public class MainActivity extends AppCompatActivity {
                         String expression = text.getText().toString();
 
                         double res = parser.calculate(parser.parse(expression));
+                        history.append(text.getText().toString() + "=" + Double.toString(res) + "\n");
 
-                        text.setText(Double.toString(res));
+
+                        text.setText("");
                         return;
                     }
 
