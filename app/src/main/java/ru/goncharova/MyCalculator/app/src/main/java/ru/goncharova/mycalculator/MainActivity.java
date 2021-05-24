@@ -3,6 +3,7 @@ package ru.goncharova.mycalculator;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,8 +14,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.provider.Telephony.Mms.Part.TEXT;
+
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TEXT = "EXPRESSION";
 
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         if(isChecked) {
@@ -29,13 +33,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //setTheme(R.style.Theme_MyCalculator);
-
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle == null){
+            return;
+        }
+        else {
+            String intentText = bundle.getString(TEXT);
+
+            TextView text = (TextView) findViewById(R.id.textView);
+            text.setText(intentText);
+        }
 
         Switch s = (Switch) findViewById(R.id.switch1);
 
         s.setOnCheckedChangeListener(this::onCheckedChanged);
+
+        Button buttonSettings = (Button)findViewById(R.id.buttonSettings);
 
         ArrayList<Button> allButtons = new ArrayList<>();
 
@@ -59,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         allButtons.add((Button)findViewById(R.id.button0));
 
         for(int i = 0; i < allButtons.size();i++) {
+
 
             Button button = allButtons.get(i);
             button.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +113,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mainPage = new Intent(MainActivity.this, MainActivity2.class);
+                // Метод стартует активити, указанную в интенте
+                startActivity(mainPage);
+            }
+        });
     }
+
+
 
 
 }
