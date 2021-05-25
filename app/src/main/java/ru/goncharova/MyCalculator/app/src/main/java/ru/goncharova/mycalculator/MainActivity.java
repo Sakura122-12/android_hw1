@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         if (bundle == null){
-            return;
+            //return;
         }
         else {
             String intentText = bundle.getString(TEXT);
@@ -116,9 +117,9 @@ public class MainActivity extends AppCompatActivity {
 
         buttonSettings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent mainPage = new Intent(MainActivity.this, MainActivity2.class);
+                Intent settings = new Intent(MainActivity.this, CalcSettings.class);
                 // Метод стартует активити, указанную в интенте
-                startActivity(mainPage);
+                startActivity(settings);
             }
         });
     }
