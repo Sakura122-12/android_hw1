@@ -1,10 +1,13 @@
 package ru.goncharova.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,12 +16,26 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //setTheme(R.style.Theme_MyCalculator);
+
         setContentView(R.layout.activity_main);
+
+        Switch s = (Switch) findViewById(R.id.switch1);
+
+        s.setOnCheckedChangeListener(this::onCheckedChanged);
 
         ArrayList<Button> allButtons = new ArrayList<>();
 
@@ -49,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
                     Button bt = (Button) v;
 
-                    TextView text = (TextView) findViewById(R.id.editTextTextPersonName);
+                    TextView text = (TextView) findViewById(R.id.textView);
+                    TextView history = (TextView) findViewById(R.id.editTextTextMultiLine);
 
                     if(bt.getText().equals("Del")) {
 
@@ -66,8 +84,10 @@ public class MainActivity extends AppCompatActivity {
                         String expression = text.getText().toString();
 
                         double res = parser.calculate(parser.parse(expression));
+                        history.append(text.getText().toString() + "=" + Double.toString(res) + "\n");
 
-                        text.setText(Double.toString(res));
+
+                        text.setText("");
                         return;
                     }
 
