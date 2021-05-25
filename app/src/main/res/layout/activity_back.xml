@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BackActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFBE6"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="196dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Личный кабинет пользователя"
+            android:textAlignment="center"
+            android:textColor="#37966F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="textPersonName"
+            android:text="Имя пользователя"
+            android:textColor="#37966F"
+            android:textColorHighlight="#37966F"
+            android:textColorHint="#37966F"
+            android:textColorLink="#37966F"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editTextPhone3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="phone"
+            android:text="Телефон"
+            android:textColor="#37966F"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editTextTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="time"
+            android:text="Текущее время"
+            android:textColor="#37966F"
+            android:textColorHighlight="#37966F"
+            android:textColorHint="#37966F"
+            android:textColorLink="#37966F"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="date"
+            android:text="Дата"
+            android:textColor="#37966F"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Введите ниже пароль:"
+            android:textColor="#37966F"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-medium"
+            android:inputType="textPassword"
+            android:textColor="#37966F"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            tools:text="Пароль" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            style="@android:style/Widget.DeviceDefault.CalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B9E4c9"
+            android:minDate="04/01/2021"
+            android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
