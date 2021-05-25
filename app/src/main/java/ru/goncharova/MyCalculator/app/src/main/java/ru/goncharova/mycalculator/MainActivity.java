@@ -1,24 +1,58 @@
 package ru.goncharova.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.provider.Telephony.Mms.Part.TEXT;
+
 public class MainActivity extends AppCompatActivity {
 
+    public static final String TEXT = "EXPRESSION";
 
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        if(isChecked) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+        else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle == null){
+            //return;
+        }
+        else {
+            String intentText = bundle.getString(TEXT);
+
+            TextView text = (TextView) findViewById(R.id.textView);
+            text.setText(intentText);
+        }
+
+        Switch s = (Switch) findViewById(R.id.switch1);
+
+        s.setOnCheckedChangeListener(this::onCheckedChanged);
+
+        Button buttonSettings = (Button)findViewById(R.id.buttonSettings);
 
         ArrayList<Button> allButtons = new ArrayList<>();
 
@@ -43,13 +77,15 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i = 0; i < allButtons.size();i++) {
 
+
             Button button = allButtons.get(i);
             button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
 
                     Button bt = (Button) v;
 
-                    TextView text = (TextView) findViewById(R.id.editTextTextPersonName);
+                    TextView text = (TextView) findViewById(R.id.textView);
+                    TextView history = (TextView) findViewById(R.id.editTextTextMultiLine);
 
                     if(bt.getText().equals("Del")) {
 
@@ -66,8 +102,10 @@ public class MainActivity extends AppCompatActivity {
                         String expression = text.getText().toString();
 
                         double res = parser.calculate(parser.parse(expression));
+                        history.append(text.getText().toString() + "=" + Double.toString(res) + "\n");
 
-                        text.setText(Double.toString(res));
+
+                        text.setText("");
                         return;
                     }
 
@@ -76,7 +114,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        buttonSettings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent settings = new Intent(MainActivity.this, CalcSettings.class);
+                // Метод стартует активити, указанную в интенте
+                startActivity(settings);
+            }
+        });
     }
+
+
 
 
 }
